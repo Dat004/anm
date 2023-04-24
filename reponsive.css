@@ -1,0 +1,234 @@
+@media only screen and (min-width: 576px) {
+    aside .body {
+        max-width: 540px; 
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    aside .body {
+        max-width: 729px;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    aside .body {
+        max-width: 1220px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    aside .body {
+        max-width: 1224px;
+    }
+}
+
+/* Mobile */
+
+@media(min-width: 0) and (max-width: 46.1875em) {
+
+    .container header .bars {
+        order: 3;
+        display: block;
+    }
+
+    .container header .bars .fa-bars {
+        display: block;
+    }
+
+    .container header .link {
+        display: none;
+    }
+
+    .container header .form_input {
+        display: none;
+    }
+
+    header .bars .fa-magnifying-glass {
+        display: block;
+    }
+
+    .body .sec .category,
+    .body .sec .category a{
+        font-size: 0.9rem;
+    }
+
+    .anime .generous {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    section .nav {
+        display: block;
+    }
+
+    section .nav .relate {
+        /* border-top: 1px solid red; */
+        padding-left: 0;
+        padding-top: 30px;
+    }
+
+    section .about {
+        display: flex;
+    }
+
+    section .about .info_films {
+        flex: 2;
+    }
+
+    section .about .evalute {
+        text-align: end;
+        flex: 1;
+    }
+
+    section .nav .details p {
+        font-size: 0.85rem;
+        /* background-color: red; */
+        max-height: 350px;
+        overflow: hidden;
+    }
+
+    .about .info_films .now {
+        font-size: 1.2rem;
+    }
+
+    .about .info_films .title {
+        font-size: 0.9rem;
+    }
+
+    .about .info_films .category {
+        font-size: 0.8rem;
+    }
+
+    .about .evalute div {
+        padding: 4px 8px;
+    }
+
+    .about .evalute div .fa-solid {
+        font-size: 1rem;
+    }
+
+    .about .evalute div span {
+        font-size: 0.7rem;
+    }
+
+    .film_relate .films .info h3 {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .film_relate .films .info .dtl,
+    .film_relate .films .info .ctg {
+        font-size: 0.85rem;
+    }
+
+    nav .info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info .notifical {
+        border-bottom: 1px solid #fff;
+        padding-bottom: 10px;
+    }
+
+    .info .category {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    aside .banner {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        height: 40vh;
+    }
+
+    .banner .logo .content {
+        display: none;
+    }
+
+    .banner .nav_check label {
+        margin: 0 8px;
+        width: 13px;
+        height: 13px;
+    }
+}
+
+/* Tablet */
+
+@media(min-width: 46.1875em) and (max-width: 64em) {
+    .container header {
+        position: relative;
+    }
+
+    .container header .bars {
+        order: 3;
+        display: block;
+    }
+
+    .container header .link {
+        display: none;
+    }
+
+    .anime .generous {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header .bars .fa-bars{
+        display: block;
+    }
+
+    .film_relate .films .info .ctg {
+        overflow: hidden;
+        height: 19px;
+        display: block;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+    }
+
+    aside .body .sec {
+        margin-top: 20px;
+    }
+
+    aside .banner {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        height: 45vh;
+    }
+
+    section .nav .details p {
+        /* background-color: red; */
+        max-height: 350px;
+        overflow: hidden;
+    }
+
+    section .nav .details p {
+        /* background-color: red; */
+        max-height: fit-content;
+        overflow: hidden;
+    }
+
+    aside .menu .page_menus {
+        width: 400px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 18px 8px;
+    }
+    
+}
+
+
+
+/* Mobile And Tablet */
+
+@media only screen and (min-width: 0) and (max-width: 63.9375em) {
+    .container header {
+        position: fixed;
+        height: 70px;
+        width: 100%;
+        z-index: 999;
+    }
+}

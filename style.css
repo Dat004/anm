@@ -1,0 +1,881 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@100;200;300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 62.5%;
+    font-family: 'Libre Franklin', sans-serif;
+    background-color: #000000;
+    text-decoration: none;
+}
+
+.container header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    color: #fff;
+    /* position: fixed;
+    height: 80px;
+    right: 0;
+    left: 0;
+    z-index: 10000; */
+    background-color: #000000;
+    margin-bottom: 15px;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo .fa-solid {
+    margin-right: 8px;
+    font-size: 1.6rem;
+    background: linear-gradient(140deg, #d738e1, #482293);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header .logo .title {
+    position: relative;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 550;
+}  
+
+
+header .link {
+    /* order: 3; */
+    display: flex;
+    justify-content: space-between;
+}
+
+header .link a {
+    position: relative;
+    margin-right: 20px;
+    font-size: 0.8rem;
+    list-style: none;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 20px;
+    opacity: 0.4;
+    transition: 0.3s linear;
+}
+
+header .link a::after {
+    content: "";
+    display: block;
+    left: 0;
+    width: 0;
+    bottom: 0;
+    height: 2px;
+    border-radius: 5px;
+    background-color: red;
+    position: absolute;
+    transition: 0.2s linear;
+}
+
+header .link a.active::after {
+    content: "";
+    display: block;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 2px;
+    border-radius: 5px;
+    background-color: red;
+    position: absolute;
+    transition: 0.2s linear;
+}
+
+header .link a:hover::after {
+    width: 100%;
+}
+
+header .link a.active,
+header .link a:hover {
+    opacity: 1;
+    /* border-radius: 20px;
+    background-color: red; */
+}
+
+header .form_input {
+    /* order: 2; */
+    min-width: 350px;
+    background-color: #1F1F1F;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+header .form_input #input {
+    padding: 12px 24px;
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #fff;
+}
+
+header .form_input .fa-solid {
+    font-size: 1.0rem;
+    padding: 12px;
+}
+
+header .users .fa-solid,
+header .users .fa-brands {
+    font-size: 1.0rem;
+    padding: 0 12px;
+}
+
+header .bars {
+    display: none;
+}
+
+header .bars .icon {
+    display: flex;
+    align-items: center;
+}
+
+header .bars .fa-magnifying-glass {
+    display: none;
+    margin-right: 10px;
+    font-size: 1.2rem
+}
+
+header .bars .fa-bars{
+    display: none;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/* .around {
+    padding: 0 7%;
+} */
+
+aside .banner {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    height: 80vh;
+}
+
+.around .btn {
+    display: none;
+}
+
+/* .banner #radio1:checked ~ #lb1 {
+    background-color: #23e3c9;
+} */
+
+.banner .nav_check {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .nav_check label {
+    display: inline-block;
+    border: 2px solid #40d3dc;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: transparent;
+    margin: 0 24px;
+    transition: 0.3s ease-in-out;
+}
+
+.banner .nav_check label:hover {
+    background-color: #40d3dc;
+    cursor: pointer;
+}
+
+/* .banner .nav_check #lb1:checked {
+    background-color: #23e3c9;
+} */
+
+.banner .logo {
+    height: 100%;
+    min-width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    transition: 0.5s linear;
+    transform: translateX(0%);
+}
+
+#radio1:checked ~ .banner .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .banner .first {
+    margin-left: -100%;
+}
+
+#radio3:checked ~ .banner .first {
+    margin-left: -200%;
+}
+
+#radio4:checked ~ .banner .first {
+    margin-left: -300%;
+}
+
+
+
+
+.banner .logo::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.banner .logo .content {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    z-index: 999;
+    max-width: 500px;
+}
+
+.banner .logo .name {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 3.3rem;
+    margin-bottom: 10px;
+}
+
+.banner .logo .detail {
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 2;
+    margin-bottom: 14px;
+}
+
+.banner .logo .download {
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: red;
+    padding: 12px 26px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.anime {
+    padding: 12px 7%;
+}
+
+.anime .title {
+    background: linear-gradient(140deg, #c214d3, #243ad3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* background: linear-gradient(140deg, #d738e1, #482293);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.anime .generous {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 15px;
+    row-gap: 30px;
+}
+
+.anime .generous .film_animes {
+    width: 100%;
+}
+
+.anime .generous .film_animes .poster {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.anime .generous .film_animes .film {
+    max-width: 100%;
+    padding-top: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.2s linear;
+}
+
+.anime .generous .film_animes .film:hover {
+    transform: scale(1.2);
+}
+
+.anime .generous .film_animes .film::after {
+    content: "\f04b";
+    display: flex;
+    font-size: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    color: transparent;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: 0;
+    height: 0%;
+    left: 0;
+    z-index: 10;
+    transition: 0.15s linear;
+}
+
+.anime .generous .film_animes .film:hover::after {
+    height: 100%;
+    color: #fff;
+}
+
+.generous .content {
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* min-height: 274px; */
+}
+
+.generous .content .name_films {
+    font-size: 1.2rem;
+    padding: 12px;
+    font-weight: 600;
+    min-height: 70px;
+    color: #000;
+    display: block;
+    text-decoration: none;
+    height: 48px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-height: 1.5;
+}
+
+.generous .content .details {
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    padding: 12px;
+    height: 60px;
+    color: #000;
+    overflow: hidden;
+    line-height: 1.7;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.generous .content .evaluate {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #EFEFEF;
+    padding: 15px 12px;
+}
+
+.generous .content .evaluate button {
+    border: none;
+    outline: none;
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 3px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.generous .content .evaluate .fa-heart {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+nav {
+    padding: 20px 7%;
+    background-color: #131313;
+}
+
+nav .info {
+    display: flex;
+    padding: 20px 0;
+}
+
+.info .notifical {
+    flex: 1;
+}
+
+.info .title {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.info .category {
+    flex: 1;
+    display: flex;
+}
+
+.category .season {
+    flex: 1;
+}
+
+.category .film_category {
+    flex: 1;
+} 
+
+.info .list li {
+    color: #fff;
+    font-size: 0.9rem;
+    list-style: none;
+    padding: 6px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+aside .body {
+    /* width: 85%; */
+    margin: auto;
+    padding: 0 15px;
+}
+
+aside .body #video {
+    border-radius: 5px;
+    overflow: hidden;
+    padding-bottom: 55%;
+    position: relative;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+aside .body .sec {
+    margin-top: 30px;
+}
+
+aside .body #video #mp4 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+}
+
+aside .body #video .controls {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.3rem;
+    color: #fff;
+}
+
+aside .body #video .around {
+    /* display: none; */
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    transition: 0.3s linear;
+    opacity: 0;
+}
+
+aside .body #video:hover .around {
+    opacity: 1;
+    /* display: block; */
+    transition: 0.3s linear;
+}
+
+aside .body #video .around .handle {
+    font-size: 3rem;
+    color: red;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+aside .body #video .controls #range {
+    min-width: 800px;
+    cursor: pointer;
+}
+
+aside .body #video .controls #range::-moz-range-progress {
+    background-color: #243ad3;
+}
+
+aside .body #video .handle .mg {
+    margin: 0 60px;
+    position: relative;
+    text-align: center;
+}
+
+aside .body #video .handle .auto {
+    position: relative;
+}
+
+
+aside .body #video .handle .mg .seconds {
+    font-size: 0.8rem;
+    color: red;
+    padding: 8px 6px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+aside .body #video .handle .mg .fa-handle {
+    font-size: 2.1rem;
+    color: #fff;
+    position: relative;
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    /* border: 2px solid #333; */
+    opacity: 0.5;
+    animation: around 1.5s ease-in-out infinite;
+  }
+  
+  .circle:nth-child(2) {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #e41313;
+    background-color: rgba(246, 31, 31, 0.439);
+    /* animation-delay: 0.5s; */
+  }
+  
+  .circle:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    animation-delay: 0.8s;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.491);
+  }
+
+@keyframes around {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.4);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+}
+
+section .about {
+    display: flex;
+    justify-content: space-between;
+    /* width: 85%;
+    margin: auto; */
+}
+
+.about .info_films .now {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.about .info_films .title {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.body .sec .category {
+    color: #fff;
+    font-size: 1rem;
+    display: inline-block;
+}
+
+.body .sec .category a:first-child {
+    margin: 0 10px;
+}
+
+.body .sec .category a {
+    display: inline-block;
+    text-decoration: none;
+    min-width: 90px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 6px 12px;
+}
+
+.about .evalute div {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: transparent;
+    border: 1px solid #fff;
+    transition: 0.25s linear;
+    cursor: pointer;
+}
+
+.about .evalute div .fa-solid {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.about .evalute div .red {
+    color: red;
+}
+
+/* .about .evalute div .fa-solid:hover {
+    color: red;
+} */
+
+.about .evalute div span {
+    color: #fff;
+    font-size: 1rem;
+}
+
+section .nav {
+    display: grid;
+    grid-template-columns: 2fr 1.3fr;
+    border-top: 1px solid #fff;
+    /* width: 85%;
+    margin: auto; */
+    margin-top: 30px;
+    padding: 20px 0 0 0;
+    column-gap: 20px;
+}
+
+section .nav .details h3 {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+section .nav .details p {
+    color: #ffff;
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+section .nav .relate {
+    /* background-color: #131313; */
+    padding-left: 20px;
+}
+
+section .nav .relate #title {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.relate .film_relate {
+    display: grid;
+    row-gap: 20px;
+    height: 110px;
+    /* overflow: hidden; */
+}
+
+.relate .film_relate .films {
+    display: flex;
+    height: 100%;
+    max-height: 110px;
+}
+
+.relate .film_relate .films .logo {
+    flex: 1;
+    margin-right: 10px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.film_relate .films .logo img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.relate .film_relate .films .info {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.film_relate .films .info h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    height: 24px;
+    overflow: hidden;
+}
+
+.film_relate .films .info p {
+    color: #fff;
+}
+
+.film_relate .films .info .dtl {
+    text-overflow: ellipsis;
+    height: 34px;
+    line-height: 2rem;
+    overflow: hidden;
+    font-size: 0.9rem;
+    display: block;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.film_relate .films .info .ctg {
+    font-size: 1rem;
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------MENU	-------------------- */
+
+
+aside .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000000;
+    overflow: hidden;
+    transition: 0.25s linear;
+}
+
+aside .menu .page_menus {
+    width: 200px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 18px 8px;
+}
+
+.menu .page_menus .close {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.menu .page_menus .form_search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.menu .page_menus label {
+    display: inline-block;
+    padding: 0 3px;
+    background-color: rgba(0, 0, 0);
+    color: #fff;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 5%;
+    top: 10px;
+    transform: translateY(0);
+    transition: transform 0.1s ease-in-out;
+}
+
+.menu .page_menus .form_search input {
+    background-color: transparent;
+    border: none;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 8px;
+    outline: none;
+    color: #fff;
+    width: 100%;
+}
+
+.menu .page_menus .form_search:focus-within label {
+    transform: translateY(-16px);
+    font-size: 0.65rem;
+}
+
+.page_menus .navbar .nav_link {
+    padding: 12px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page_menus .navbar .nav_link a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.page_menus .navbar .nav_link .fa-solid {
+    color: #fff;
+}
